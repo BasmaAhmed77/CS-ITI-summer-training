@@ -10,13 +10,3 @@ int y = 20;
 Console.WriteLine(y);
 
 
-Console.WriteLine("Basma ");
-
-
-Console.WriteLine("Youssef");
-
-
-Console.WriteLine("Yonis");
-
-
-
