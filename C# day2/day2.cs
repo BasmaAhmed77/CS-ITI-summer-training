@@ -2,8 +2,10 @@
 using System.Runtime.InteropServices;
 
 
-
-
+public struct time
+{
+    public int hour, min, second;
+}
 class Program
 {
     static void Main(string[] args)
@@ -56,7 +58,7 @@ class Program
         {
             Console.WriteLine($"Avg age of Track {i + 1}: {sum[i] / studentsNum}");
         }
-        
+
 
 
         #endregion
@@ -64,8 +66,14 @@ class Program
 
         #region time format
 
-
-
+        time time1;
+        Console.Write("Enter hour: ");
+        time1.hour = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Enter minute: ");
+        time1.min = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Enter second: ");
+        time1.second = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine($"{time1.hour}H:{time1.min}M:{time1.second}S");
         #endregion
 
     }
