@@ -22,6 +22,13 @@ class Program
             Console.WriteLine($"The name of student {i+1}: {students[i]}");
         }
 
+
+        // will be completed before deadline
+        #endregion
+
+
+
+
         #endregion student age for each track
         Console.Write("Enter number of students: ");
         int studentsNum = Convert.ToInt32(Console.ReadLine());
