@@ -115,6 +115,7 @@ class Program
         #region MCQ class
 
         MCQ mcq1 = new MCQ();
+        mcq1.show();
         string[] choices = { "1", "2", "3", "4" };
         #endregion
     }
