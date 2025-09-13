@@ -60,6 +60,32 @@ class Question
         Console.WriteLine("Mark: " + mark);
     }  
 }
+
+class MCQ : Question
+{
+    private string[] chooses;
+    private int correctIndex;
+    public MCQ() 
+    {
+        chooses = new string[] { "No choices" };
+        correctIndex = -1;
+    }
+    public MCQ(string h, string b, int m, string[] c, int ci) : base(h, b, m)
+    {
+        chooses = c;
+        correctIndex = ci;
+    }
+    public void show()
+    {
+        base.show();
+        Console.WriteLine("Choices: ");
+        for (int i = 0; i < chooses.Length; i++)
+        {
+            Console.WriteLine((i + 1) + ". " + chooses[i]);
+        }
+        Console.WriteLine("Correct Index: " + correctIndex);
+    }
+}
 class Program
 {
     static void Main(string[] args)
@@ -88,6 +114,8 @@ class Program
 
         #region MCQ class
 
+        MCQ mcq1 = new MCQ();
+        string[] mcq1 = { "1", "2", "3", "4" };
         #endregion
     }
 }
