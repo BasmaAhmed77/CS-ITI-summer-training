@@ -33,16 +33,61 @@ class Calc
     }
 
 }
+
+class Question
+{
+    private int mark;
+    private string header, body;
+
+    public Question()
+    {
+        header = "No header";
+        body = "No body";
+        mark = 0;
+    }
+
+    public  Question(string h, string b, int m)
+    {
+        header = h;
+        body = b;
+        mark = m;
+    }
+
+    public void show() 
+    {
+        Console.WriteLine("Header: " + header);
+        Console.WriteLine("Body: " + body);
+        Console.WriteLine("Mark: " + mark);
+    }  
+}
 class Program
 {
     static void Main(string[] args)
     {
+        #region class Calc
+
         Calc calc1 = new Calc();
-        Console.WriteLine("The sum of 2 numbers: "+calc1.sum(2,3));
-        Console.WriteLine("The sum of 3 numbers: "+calc1.sum(2,3,5));
-        Console.WriteLine("The sub of 2 int numbers: "+calc1.sub(10,3));
-        Console.WriteLine("The sub of 2 float numbers: "+calc1.sub(10.5f,3.7f));
-        Console.WriteLine("The mul of 2 numbers: "+calc1.mul(2,3));
-        Console.WriteLine("The div of 2 numbers: " + calc1.div(15,3));
+        Console.WriteLine("The sum of 2 numbers: " + calc1.sum(2, 3));
+        Console.WriteLine("The sum of 3 numbers: " + calc1.sum(2, 3, 5));
+        Console.WriteLine("The sub of 2 int numbers: " + calc1.sub(10, 3));
+        Console.WriteLine("The sub of 2 float numbers: " + calc1.sub(10.5f, 3.7f));
+        Console.WriteLine("The mul of 2 numbers: " + calc1.mul(2, 3));
+        Console.WriteLine("The div of 2 numbers: " + calc1.div(15, 3));
+
+        #endregion
+
+
+        #region class question
+
+        Question q1 = new Question();
+        Question q2 = new Question("Math", "2+2=?", 5);
+        q1.show();
+        q2.show();
+
+        #endregion
+
+        #region MCQ class
+
+        #endregion
     }
 }
