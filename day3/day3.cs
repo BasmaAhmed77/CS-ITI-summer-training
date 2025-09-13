@@ -65,7 +65,7 @@ class MCQ : Question
 {
     private string[] chooses;
     private int correctIndex;
-    public MCQ() 
+    public MCQ() : base()
     {
         chooses = new string[] { "No choices" };
         correctIndex = -1;
@@ -115,7 +115,7 @@ class Program
         #region MCQ class
 
         MCQ mcq1 = new MCQ();
-        string[] mcq1 = { "1", "2", "3", "4" };
+        string[] choices = { "1", "2", "3", "4" };
         #endregion
     }
 }
