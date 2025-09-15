@@ -31,51 +31,50 @@ class Car
         engine.show();
     }
 }
-class Employee
+class Employee : Person
 {
     public string Name { get; set; }
     public int Age { get; set; }
-    public string Position { get; set; }
 
-    public string [] courses;
+    public List<Course> courses = new List<Course>();
 
     public Department department { get; set; }
-    public Employee(string name, int age, Department depart, string[] courses)
+    public Employee(string name, int age, Department depart) : base(name, age)
     {
-        Name = name;
         department = depart;
-        this.courses = courses;
+        //this.courses = courses;
     }
+
+    //public void EnrollInCourse(string course)
+    //{
+    //    courses.Add(courses);
+    //}
     public void show()
     {
         Console.WriteLine($"Name: {Name}");
-        Console.WriteLine($"Department: {department}");
-
-        for (int i = 0; i < department.EmployeeCount; i++)
+        Console.WriteLine($"Age: {Age}");
+        Console.WriteLine($"Department: {department.Name}");
+        foreach (var course in courses)
         {
-            Console.WriteLine($"Course {i + 1}: {courses[i]}");
+            Console.WriteLine($"Course: {course}");
         }
-
     }
 }
+
 
 class Department
 {
     public string Name { get; set; }
-    public int EmployeeCount { get; set; }
 
-    List<Employee> employees = new List<Employee>();
-
-    List <Instructor> instructors = new List<Instructor>();
-    public Department(string name, int employeeCount)
+    public List<Employee> employees = new List<Employee>();
+    public List <Instructor> instructors = new List<Instructor>();
+    public Department(string name)
     {
         Name = name;
-        EmployeeCount = employeeCount;
     }
     public void DisplayInfo()
     {
         Console.WriteLine($"Department Name: {Name}");
-        Console.WriteLine($"Employee Count: {EmployeeCount}");
     }
 }
 
