@@ -158,12 +158,12 @@ class Instructor : Person
     {
         courses.Add(course);
     }
-    public void show()
-    {
-        Console.WriteLine($"Name: {Name}");
-        Console.WriteLine($"Age: {Age}");
-        Console.WriteLine($"Subject: {Subject}");
-    }
+    //public void show()
+    //{
+    //    Console.WriteLine($"Name: {Name}");
+    //    Console.WriteLine($"Age: {Age}");
+    //    Console.WriteLine($"Subject: {Subject}");
+    //}
 }
 
 class Course
@@ -184,6 +184,70 @@ class Course
         Console.WriteLine($"Credits: {Credits}");
         Console.WriteLine($"Instructor: {instructor.Name}");
     }
+}
+
+abstract class Shape
+{
+    public abstract double Area();
+public abstract double Perimeter();
+}
+
+class Circle : Shape
+{
+    public double Radius { get; set; }
+    public Circle(double radius)
+    {
+        Radius = radius;
+    }
+    public override double Area()
+    {
+        return Math.PI * Radius * Radius;
+    }
+    public override double Perimeter()
+    {
+        return 2 * Math.PI * Radius;
+    }
+}
+
+class Rectangle : Shape
+{
+    public double Width { get; set; }
+    public double Height { get; set; }
+    public Rectangle(double width, double height)
+    {
+        Width = width;
+        Height = height;
+    }
+    public override double Area()
+    {
+        return Width * Height;
+    }
+    public override double Perimeter()
+    {
+        return 2 * (Width + Height);
+    }
+}
+
+static class IdGenerator
+{
+    private static int currentId = 0;
+    public static int GenerateId()
+    {
+        currentId++;
+        return currentId;
+    }
+}
+class Grade
+{
+    public int value { get; set; }
+
+   
+}
+
+enum CourseLevel 
+{   Beginner, 
+    Intermediate, 
+    Advanced,
 }
 class Program
 {

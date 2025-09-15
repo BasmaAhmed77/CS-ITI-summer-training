@@ -116,6 +116,7 @@ class Program
 
         MCQ mcq1 = new MCQ();
         mcq1.show();
+        //MCQ mcq2 = new MCQ("Math", "2+2=?", 5, choices, 1);
         string[] choices = { "1", "2", "3", "4" };
         #endregion
     }
